@@ -1,0 +1,41 @@
+﻿<h1>getAll</h1>
+
+@{
+    var AllEmps = ViewBag.Emps;
+    //var msg = "ttttt";
+}
+
+@*<script>
+    alert("@msg")
+</script>*@
+
+<br />
+<td> <a href="/Employee/Create" class="btn btn-primary"> Create New </a> </td>
+
+<table class="table table-borderd table-hover">
+    <tr>
+        <th> Emp_ID </th>
+        <th> Emp_Name </th>
+        <th> Emp_Age </th>
+        <th> Emp_Email </th>
+
+        <th> &nbsp; </th>
+        <th> &nbsp; </th>
+        <th> &nbsp; </th>
+    </tr>
+    @foreach (var item in AllEmps)
+    {
+        <tr>
+            <td> @item.Id </td>
+            <td> @item.Name </td>
+            <td> @item.Age </td>
+            <td> @item.Email </td>
+
+            <td> <a href="/Employee/getbyId/@item.Id" class="btn btn-primary"> Select </a> </td>
+            <td> <a href="/Employee/Edit/@item.Id" class="btn btn-secondary"> Edit </a> </td>
+            <td> <a href="/Employee/Delete/@item.Id" class="btn btn-danger"> Delete </a> </td>
+        </tr>
+    }
+</table>
+
+

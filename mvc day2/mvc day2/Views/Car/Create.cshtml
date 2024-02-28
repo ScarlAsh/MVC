@@ -1,0 +1,50 @@
+﻿@model Car
+
+
+
+@* <form action="/Car/Create" method="post">
+
+	<label> Car Number         </label>
+	<input type="text" name="Num"/>
+	<br/>
+	<label> Car Color       </label>
+	<input type="text" name="Color" />
+
+	<br />
+	<label> Car Model       </label>
+	<input type="text" name="Model" />
+
+	<br />
+	<label> Car Nanfacture       </label>
+	<input type="text" name="Manfacture" />
+
+
+	<br />
+
+	<input type="submit"value="Save"/>
+</form>
+
+ *@
+ @using(Html.BeginForm("Create" , "Car" , FormMethod.Post) )
+{
+	@Html.LabelFor(m => m.Num)
+	@Html.EditorFor(m => m.Num)
+	<br/>
+
+	@Html.LabelFor(m => m.Color)
+	@Html.EditorFor(m => m.Color)
+	<br />
+
+	@Html.LabelFor(m => m.Model)
+	@Html.EditorFor(m => m.Model)
+	<br/>
+
+	@Html.LabelFor(m => m.Manfacure)
+	@Html.EditorFor(m => m.Manfacure)
+
+
+	<input class="btn btn-dark" type="submit" value="save"/>
+	<br />
+}
+
+

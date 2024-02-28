@@ -1,0 +1,9 @@
+﻿@model Car
+
+<h4>This is the selected car's Number <br />@Html.DisplayFor(model => model.Num)</h4>
+<h4>This is the selected car's Model <br />@Html.DisplayFor(model => model.Model)</h4>
+<h4>This is the selected car's Color <br />@Html.DisplayFor(model => model.Color)</h4>
+<h4>This is the selected car's Manufacture <br />@Html.DisplayFor(model => model.Manfacure)</h4>
+
+<br />
+@Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-dark" })

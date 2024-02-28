@@ -1,0 +1,26 @@
+﻿@model List<Person>
+
+
+@{
+	void myfun(List<Person> mylist)
+	{
+		@foreach (var item in mylist)
+		{
+			@Html.LabelFor(m =>item.Id)
+			@Html.DisplayFor(m => item.Id)
+			<br/>
+
+
+			@Html.LabelFor(m => item.Name)
+			@Html.DisplayFor(m => item.Name)
+			<br />
+
+			<img src="/images/@item.Image"/>
+
+		}
+	}
+}
+
+@{
+	myfun(Model);
+}

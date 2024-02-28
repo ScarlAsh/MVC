@@ -1,0 +1,24 @@
+﻿<h1>Edit</h1>
+
+@{
+    Employee curEmp = ViewBag.selectedEmp;
+}
+<form method="post" action="/Employee/EditSave">
+
+    ID: <input type="text" name="id" value="@curEmp.Id"/>
+    <br />
+    Name: <input type="text" name="name" value="@curEmp.Name" />
+    <br />
+    Age: <input type="text" name="Age" value="@curEmp.Age" />
+    <br />
+    Email: <input type="text" name="Email" value="@curEmp.Email" />
+    <br />
+
+    Salary: <input type="text" name="Salary" value="" />
+    <br />
+    Description: <input type="text" name="Description" value="" />
+    <br />
+
+    <input type="submit" value="Save" />
+</form>
+

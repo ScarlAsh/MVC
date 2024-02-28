@@ -1,0 +1,83 @@
+﻿@model IEnumerable<MVC_day5.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<form asp-action="Search" asp-method="post">
+    <select name="srchid" asp-items="@ViewBag.Departments"> 
+    </select>
+    <input type="submit" value="Search" class="btn btn-success"/>
+</form>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+<table class="table table-bordered table-active">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Joindate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Deptartment)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Joindate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deptartment.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EmpID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.EmpID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.EmpID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<br/>
+
+<button > <a href="/hr/home/index">HR Area</a></button>
+<button > <a href="/admin/home/index">Admin Area</a></button>
+<button > <a href="/Finance/home/index">Finance Area</a></button>
+

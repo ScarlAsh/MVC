@@ -1,0 +1,31 @@
+﻿@model List<Car>
+
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model[0].Num)</th>
+            <th>@Html.DisplayNameFor(model => model[0].Color)</th>
+            <th>@Html.DisplayNameFor(model => model[0].Model)</th>
+            <th>@Html.DisplayNameFor(model => model[0].Manfacure)</th>
+            <th colspan="3"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Num)</td>
+                <td>@Html.DisplayFor(modelItem => item.Color)</td>
+                <td>@Html.DisplayFor(modelItem => item.Model)</td>
+                <td>@Html.DisplayFor(modelItem => item.Manfacure)</td>
+
+                <td class="btn-dark">@Html.ActionLink("Select", "Select", new { Num = item.Num })</td>
+                <td class="btn-primary">@Html.ActionLink("Edit", "Edit", new { Num = item.Num })</td>
+                <td class="btn-danger">@Html.ActionLink("Delete", "Delete", new { Num = item.Num })</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+
+@Html.ActionLink("Create a new car", "Create", null, new { @class = "btn btn-primary" })

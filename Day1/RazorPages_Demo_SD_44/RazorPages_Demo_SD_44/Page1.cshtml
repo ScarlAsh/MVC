@@ -1,0 +1,131 @@
+﻿@*@{
+    Layout = "_CustomeLayout.cshtml";
+}*@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+</head>
+
+@*@RenderPage("Header.cshtml")*@
+<body>
+    @{
+        string name = "Basma";
+        var age = 30;
+
+        string msg = "nnnn";
+
+        <p>
+            @{
+                age = 5;
+            }
+            Age = @age
+        </p>
+    }
+
+    @*<script>
+            alert("test.........");
+        </script>*@
+
+    <div style="background-color:aqua">
+        Hello in my webApp ya @name , Ur Age: @age
+    </div>
+
+
+    @if (DateTime.Now.Hour < 12)
+    {
+        msg = "Have a great morning";
+        <div>
+            Here is ur tip: @msg
+        </div>
+    }
+    else
+    {
+        msg = "Have a lovely night";
+        <div>
+            Here is ur tip: @msg
+        </div>
+    }
+
+    <ul>
+        @for (int i = 0; i < 5; i++)
+        {
+            <li> @(i+1) </li>
+        }
+    </ul>
+
+    @*<form method="get">
+            Name: <input type="text" name="name" value="" />
+            <br />
+            City: <input type="text" name="city" value="" />
+            <br />
+            Age: <input type="text" id="age" value="" />
+            <br />
+            <input type="submit" value="Save" />
+        </form>
+
+
+        <div>
+            U ENtered Name: @Request.QueryString["name"] , City: @Request.QueryString["city"]
+        </div>*@
+
+
+    @*<form method="post">
+            Name: <input type="text" name="name" value="" />
+            <br />
+            City: <input type="text" name="city" value="" />
+            <br />
+            Age: <input type="text" id="age" value="" />
+            <br />
+            <input type="submit" value="Save" />
+        </form>
+
+        @if (!Request.Form["name"].IsEmpty() && !@Request.Form["city"].IsEmpty())
+        {
+        <div>
+            U ENtered Name: @Request.Form["name"] , City: @Request.Form["city"]
+        </div>
+        }*@
+
+
+    <form method="post">
+        Name: <input type="text" name="name" value="" />
+        <br />
+        City: <input type="text" name="city" value="" />
+        <br />
+        Age: <input type="text" id="age" value="" />
+        <br />
+        <input type="submit" value="Save" />
+    </form>
+
+    @if (!Request["name"].IsEmpty() && !@Request["city"].IsEmpty())
+    {
+        <div>
+            U ENtered Name: @Request["name"] , City: @Request["city"]
+        </div>
+    }
+
+
+    @RenderPage("Footer.cshtml")
+
+
+    @section mySection
+    {
+        
+        <ul>
+            <li> List - Item </li>
+            <li> List - Item </li>
+            <li> List - Item </li>
+            <li> List - Item </li>
+            <li> List - Item </li>
+            <li> List - Item </li>
+            <li> List - Item </li>
+            <li> List - Item </li>
+
+        </ul>
+    }
+</body>
+</html>

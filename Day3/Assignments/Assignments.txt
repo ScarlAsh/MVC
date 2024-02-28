@@ -1,0 +1,38 @@
+1. Implement the following operations on Car Class:
+	- Operations:
+		GetAllCars
+		SelectCarById
+		CreateNewCar
+		Edit/UpdateCar
+		DeleteCar
+
+	- Car Class
+		Num (int)
+		Color (string)
+		Model (string)
+		Manfacture (string)
+
+
+2. Image Assignment (You will find details in attached folder)
+
+
+3. Product Bootstrap Card:
+
+* Controller:
+  ProductController
+
+* Actions:
+  ShowDefaultProduct()
+	//Displays ProductCard with Default (Name, Picture, Price, Description)
+
+
+  ShowProductDetails(string Name, string Picture, double Price, string Description) 
+	//Displays ProductCard with given details(Name, Picture, Price, Description) "QueryString"
+
+
+* Views:
+  DefaultProduct.cshtml
+  ProductDetails.cshtml
+
+* wwwroot:
+  Add "Images" Folder, that contains products images

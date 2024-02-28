@@ -1,0 +1,28 @@
+getAll.cshtml
+
+class Employee_getAll : WebViewPage<T:dynamic> //Strongly Typed View
+{
+	T  Model;
+
+	Employee_getAll(Model)
+	{}
+}
+
+
+string X;
+
+var X 
+
+
+
+-------------------------------------------
+
+LabelFor(Model => Model.Email)   ---> <Label> Email </Label>
+
+DisplayNameFor(Model => Model.Email)   ---> Email 
+
+DisplayFor(Model => Model.Email)   --->  Ali@Company.Com
+
+EditorFor(Model => Model.Email)   -->  textbox
+EditorFor(Model => Model.Age)   -->  NumericDropDown
+

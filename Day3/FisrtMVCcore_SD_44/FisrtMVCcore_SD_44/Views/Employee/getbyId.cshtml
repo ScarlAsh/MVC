@@ -1,0 +1,19 @@
+﻿<h1>getbyId</h1>
+
+@{
+    var curEmp = (Employee)ViewBag.selectedEmp;
+}
+
+<div>
+    Selected Employee Data:
+    <br />
+    ID: @curEmp.Id
+    <br />
+    Name: @curEmp.Name
+    <br />
+    Age: @curEmp.Age
+    <br />
+    Email: @curEmp.Email
+</div>
+
+<a href="/Employee/getAll" class="btn btn-dark"> Back To List </a>

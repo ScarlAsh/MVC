@@ -1,0 +1,34 @@
+﻿<h1>testFun4</h1>
+
+
+<div>
+    Hello First View Page..........
+</div>
+
+
+<div>
+
+This is the ViewData Message: @ViewData["msg"]
+
+<br />
+Book Names Are:
+<ol>
+    @foreach (var item in (List<string>)ViewData["BookNames"])
+    {
+        <li> @item </li>
+    }
+</ol>
+</div>
+
+<div style="background-color:antiquewhite">
+    This is the ViewBag Message: @ViewBag.myKey1
+
+    <br />
+    Book Names Are:
+    <ol>
+        @foreach (var item in ViewBag.myKey2)
+        {
+            <li> @item </li>
+        }
+    </ol>
+</div>

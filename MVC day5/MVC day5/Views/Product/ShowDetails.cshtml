@@ -1,0 +1,14 @@
+﻿@model Product
+
+@{
+    var srcc = @Model.ID + ".jpg";
+}
+
+<div class="card" style="width: 18rem;">
+    <img src="/images/@srcc" class="card-img-top" alt="Card Image">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text">@Model.Description</p>
+        <a href="/product/ShowDetails" class="btn btn-primary">Go To Details</a>
+    </div>
+</div>
