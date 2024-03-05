@@ -15,7 +15,7 @@ namespace MVC_day5.Models
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer("Data Source = .;Initial Catalog =day5db; Integrated security = true;TrustServerCertificate=true;");
+			optionsBuilder.UseSqlServer("Data Source = .;Initial Catalog =day5db;User ID=ITIStud; Password=123 ;Integrated security = true;TrustServerCertificate=true;");
 			base.OnConfiguring(optionsBuilder);
 		}
 

@@ -1,0 +1,30 @@
+﻿@model MVC_day6.Models.Product
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@{
+    ViewBag.CustomerId = new SelectList(ViewBag.Customers, "Id", "Name");
+}
+
+<h6>Create</h6>
+
+<h6>Product</h6>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" asp-route-id="@Model.Id">
+           <partial name="_FormPartial" model="Model"/>
+            <div class="form-group">
+                <br />
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <br/>
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+</div>

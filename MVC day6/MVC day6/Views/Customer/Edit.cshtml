@@ -1,0 +1,63 @@
+﻿@model Customer
+
+<h1> edit Customer</h1>
+
+<form asp-action="Edit" asp-method="post" style="width:50%;" asp-route-id = "@Model.Id">
+
+	<div asp-validation-summary="All" class="text-danger"></div>
+	<input type="hidden" asp-for="Id"/>
+
+	<div class="form-group">
+		<label asp-for="Name" class="form-label"></label>
+		<input asp-for="Name" class="form-control" />
+		<span asp-validation-for="Name" class="text-danger"></span>
+
+	</div>
+
+	<div class="form-group">
+		<label asp-for="Age" class="form-label"></label>
+		<input asp-for="Age" class="form-control" />
+		<span asp-validation-for="Age" class="text-danger"></span>
+
+	</div>
+
+
+	<div class="form-group">
+		<label asp-for="Password" class="form-label"></label>
+		<input asp-for="Password" class="form-control" />
+		<span asp-validation-for="Password" class="text-danger"></span>
+
+	</div>
+
+
+
+	<div class="form-group">
+		<label asp-for="Email" class="form-label"></label>
+		<input asp-for="Email" class="form-control" />
+		<span asp-validation-for="Email" class="text-danger"></span>
+
+	</div>
+
+	<div class="form-group">
+		<label asp-for="PhoneNum" class="form-label"></label>
+		<input asp-for="PhoneNum" class="form-control" />
+		<span asp-validation-for="PhoneNum" class="text-danger"></span>
+
+	</div>
+
+	<div class="form-group">
+		<label asp-for="Gender" class="form-label"></label>
+		<select asp-for="Gender" asp-items="@Html.GetEnumSelectList<Gender>()" class="form-control">
+			<span asp-validation-for="Gender" class="text-danger"></span>
+		</select>
+	</div>
+
+
+	<div class="form-group">
+		<br />
+		<input type="submit" value="save" class="btn btn-success" />
+
+	</div>
+
+</form>
+

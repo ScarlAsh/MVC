@@ -11283,11 +11283,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Intake 44\\MVC day5\\MVC day5\\MVC day5.csproj",
+      "projectUniqueName": "G:\\Intake 44\\MVC\\MVC day5\\MVC day5\\MVC day5.csproj",
       "projectName": "MVC day5",
-      "projectPath": "G:\\Intake 44\\MVC day5\\MVC day5\\MVC day5.csproj",
+      "projectPath": "G:\\Intake 44\\MVC\\MVC day5\\MVC day5\\MVC day5.csproj",
       "packagesPath": "C:\\Users\\HOLOOL.TK\\.nuget\\packages\\",
-      "outputPath": "G:\\Intake 44\\MVC day5\\MVC day5\\obj\\",
+      "outputPath": "G:\\Intake 44\\MVC\\MVC day5\\MVC day5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HOLOOL.TK\\AppData\\Roaming\\NuGet\\NuGet.Config",

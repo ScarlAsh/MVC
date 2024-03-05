@@ -1,0 +1,32 @@
+﻿@model MVC_day6.Models.Product
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@{
+    ViewBag.CustomerId = new SelectList(ViewBag.Customers, "Id", "Name");
+}
+
+<h6>Edit</h6>
+
+<h6>Product</h6>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" asp-route-id="@Model.Id">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <partial name="_FormPartial" model="Model" />
+            <div class="form-group">
+                <br />
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <br />
+    <a asp-action="Index">Back to List</a>
+</div>

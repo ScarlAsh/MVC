@@ -1,0 +1,59 @@
+﻿@using MVC_day6
+@using MVC_day6.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<MVC_day6.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h6>Index</h6>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+
+
+@foreach (var item in Model)
+{
+    <div class="card mb-4" style="display: inline-block; width: 30%; height:30%">
+        <img src="@item.Image" class="card-img-top" alt="Product Image" height="250">
+        <div class="card-body">
+            <h5 class="card-title">@item.Name</h5>
+            <p class="card-text">@item.Description</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Price: $@item.Price</li>
+            <li class="list-group-item">Customer: @item.Customer?.Name</li>
+        </ul>
+        <div class="card-body">
+            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary card-link">Edit</a>
+            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary card-link">Details</a>
+            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-primary card-link">Delete</a>
+        </div>
+    </div>
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               
+           
+

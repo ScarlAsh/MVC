@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hFEzBDK5Dq1+jUAvw3pTdbkOUcFa6caQisz7HaSZyxx/LVS35Z/kBfxyj49ft5lxdUxM7NprYAXhLLsb1d7d/g==",
+  "dgSpecHash": "ZIZ1xPPRCGR3zQ/0D/HQifif7Vca1x8TUvD2Tc9QEVm5cesXwyDRzfzr5hLk5EnDhsHD7EMHJ9kefPUX1EyK8Q==",
   "success": true,
-  "projectFilePath": "G:\\Intake 44\\MVC day5\\MVC day5\\MVC day5.csproj",
+  "projectFilePath": "G:\\Intake 44\\MVC\\MVC day5\\MVC day5\\MVC day5.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HOLOOL.TK\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\HOLOOL.TK\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

@@ -1,0 +1,29 @@
+﻿@model StdWithDeptAndCrsLstViewModel
+
+<h1>testView</h1>
+
+<div>
+    ID: @Model.StdID
+    <br />
+
+    Name: @Model.StdName
+    <br />
+
+    Dept_ID: @Model.Dept.ID
+    <br />
+
+    Dept_Name: @Model.Dept.Name
+    <br />
+
+    Selected Courses: 
+    @foreach (var item in Model.CourseList)
+    {
+        <li> @item </li>
+    }
+    <br />
+
+    CourseHours: @Model.CrsHrs
+
+</div>
+
+

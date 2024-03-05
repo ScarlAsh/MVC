@@ -1,0 +1,25 @@
+﻿@using MVC_day6.ViewModels
+@model ProductCustomerViewModel
+
+<header>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MVC_day6.styles.css" asp-append-version="true" />
+</header>
+
+<div class="card mb-4" style="display: inline-block; width: 30%; height:30%">
+    <img src="~/@Model.Image" class="card-img-top" alt="Product Image" height="250">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text">@Model.Description</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Price: $@Model.Price</li>
+        <li class="list-group-item">Customer Name: @Model.CustomerName</li>
+        <li class="list-group-item">Customer Id: @Model.CustomerId</li>
+
+    </ul>
+    <div class="card-body">
+        <!-- Additional card body content can be added here -->
+    </div>
+</div>
